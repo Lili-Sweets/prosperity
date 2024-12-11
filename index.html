@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Doces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Loja de Doces</h1>
+        <div id="cart-icon" onclick="toggleCart()">
+            <img src="imagens/carrinho.png" alt="Carrinho">
+        </div>
+    </header>
+
+    <div id="notification" class="hidden"></div>
+
+    <div class="container">
+        <div class="products" id="product-list"></div>
+        <button class="go-to-cart" onclick="toggleCart()">Ir para o Carrinho</button>
+    </div>
+
+    <div id="cart-details">
+        <button id="close-cart" onclick="toggleCart()">X</button>
+        <h2>Seu Carrinho</h2>
+        <div id="cart-items"></div>
+        <p>Total: R$ <span id="cart-total">0.00</span></p>
+        <div class="finalize-button" onclick="finalizeOrder()">Finalizar Pedido</div>
+    </div>
+<!-- Modal -->
+<div id="quantity-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Escolha a quantidade</h2>
+        <input type="number" id="quantity-input" value="1" min="1" />
+        <button id="confirm-quantity">Confirmar</button>
+        <button id="cancel-quantity">Cancelar</button>
+    </div>
+</div>
+
+<!-- Lista de Produtos -->
+<div class="products" id="product-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
